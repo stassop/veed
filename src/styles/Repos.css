@@ -1,0 +1,67 @@
+.Repo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Repo {
+  border-radius: 20px;
+  background-color: lightgray;
+  padding: 10px 20px;
+  margin: 10px 0;
+  display: block;
+}
+
+.Repo-owner-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.Repo-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.Repo-star-button {
+  appearance: none;
+  padding: .5em;
+  font-size: 1rem;
+  border-radius: .5em;
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+  background: white;
+}
+
+.Repos-filter {
+  display: inline-block;
+  margin: 2px;
+}
+
+.Repos-filter input[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.Repos-filter input[type=checkbox] + label {
+  padding: .5em;
+  font-size: 1rem;
+  border-radius: .5em;
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+  background: white;
+  display: block;
+}
+
+.Repos-filter input[type=checkbox]:checked + label {
+  background-color: gray;
+  color: white;
+}

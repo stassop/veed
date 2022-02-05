@@ -1,0 +1,10 @@
+.App {
+  padding: 0 20px;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
