@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo, useCallback } from 'react';
+import React, { useMemo } from 'react';
 import { useQuery } from 'react-query';
 
 import '../styles/RepoList.css';

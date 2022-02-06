@@ -40,7 +40,6 @@ const RepoListItem: React.FC<RepoListItemProps> = ({
       <button
         className="RepoListItem-star-button"
         onClick={() => onStarred(!isStarred)}
-        value={id}
         data-testid={`repo-star-button-${id}`}
       >
         { isStarred
@@ -64,4 +63,4 @@ const RepoListItem: React.FC<RepoListItemProps> = ({
   </div>
 );
 
-export default RepoListItem;
+export default React.memo(RepoListItem);

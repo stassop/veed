@@ -34,4 +34,4 @@ const RepoListFilter: React.FC<RepoListFilterProps> = ({
   );
 };
 
-export default RepoListFilter;
+export default React.memo(RepoListFilter);

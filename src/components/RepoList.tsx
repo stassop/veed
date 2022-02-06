@@ -73,7 +73,7 @@ const RepoList: React.FC<RepoListProps> = ({ repos = [] }: RepoListProps) => {
       >
         &#9733; Starred by you
       </RepoListFilter>
-      <ul className="Repo-list">
+      <ul>
         { filtered.map((repo: Repo) => (
             <li key={repo.id}>
               <RepoListItem
@@ -96,4 +96,4 @@ const RepoList: React.FC<RepoListProps> = ({ repos = [] }: RepoListProps) => {
   );
 };
 
-export default RepoList;
+export default React.memo(RepoList);
