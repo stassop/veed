@@ -20,15 +20,15 @@ const RepoList: React.FC<RepoListProps> = ({ repos = [] }: RepoListProps) => {
   useEffect(() => {
     const filtered: Repo[] = selectedLanguages.length > 0 || showStarred
       ? repos.filter((repo: Repo) =>
-          showStarred && starred.includes(repo.id)
-          || selectedLanguages.includes(repo.language))
+          repo.language !== null && selectedLanguages.includes(repo.language)
+          || showStarred && starred.includes(repo.id))
       : repos;
     setFiltered(filtered);
   }, [repos, selectedLanguages, showStarred, starred]);
 
   useEffect(() => {
     const languages: string[] = repos.reduce((list: string[], repo: Repo) => {
-      return list.includes(repo.language) || repo.language === null
+      return repo.language === null || list.includes(repo.language)
         ? list
         : [...list, repo.language];
     }, []);

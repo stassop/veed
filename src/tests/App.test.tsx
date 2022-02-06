@@ -73,7 +73,7 @@ describe('App', () => {
 
     const repo1 = await screen.findByTestId(`repo-${data[0].id}`);
     const repo2 = await screen.findByTestId(`repo-${data[1].id}`);
-    const filter = await screen.findByLabelText(data[0].language);
+    const filter = await screen.findByLabelText(data[0].language!); // assert not null cuz mocks
 
     expect(repo1).toBeInTheDocument();
     expect(repo2).toBeInTheDocument();

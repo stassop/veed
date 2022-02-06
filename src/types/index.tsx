@@ -10,7 +10,7 @@ export interface Repo {
   owner: Owner,
   html_url: string,
   description: string,
-  language: string,
+  language: string | null,
   stargazers_count: number,
 }
 
