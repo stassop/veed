@@ -58,11 +58,13 @@ describe('App', () => {
     expect(repo).toBeInTheDocument();
     expect(stars).toBeInTheDocument();
     expect(starButton).toBeInTheDocument();
+    expect(starButton).toHaveTextContent(/^.+\sStar$/); // ignore HTML entities
 
     fireEvent.click(starButton);
 
     await waitFor(() => {
       expect(stars).toHaveTextContent(`${data.stargazers_count + 1}`);
+      expect(starButton).toHaveTextContent(/^.+\sUnstar$/); // ignore HTML entities
     });
   });
 
