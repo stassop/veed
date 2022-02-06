@@ -1,0 +1,26 @@
+.RepoListFilter {
+  display: inline-block;
+  margin: 2px;
+}
+
+.RepoListFilter input[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.RepoListFilter input[type=checkbox] + label {
+  padding: .5em;
+  font-size: 1rem;
+  border-radius: .5em;
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+  background: white;
+  display: block;
+}
+
+.RepoListFilter input[type=checkbox]:checked + label {
+  background-color: gray;
+  color: white;
+}

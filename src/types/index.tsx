@@ -1,4 +1,4 @@
-export interface User {
+export interface Owner {
   login: string,
   avatar_url: string,
   html_url: string,
@@ -7,7 +7,7 @@ export interface User {
 export interface Repo {
   id: number,
   name: string,
-  owner: User,
+  owner: Owner,
   html_url: string,
   description: string,
   language: string,
